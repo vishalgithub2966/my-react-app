@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./Header";
+import Students from './Students';
 
+//import Test from '/Test.js';
 function App() {
+  let students =
+    [
+      {
+        roll:1,
+        name:"ritika",
+        mark:45
+      },
+      {
+        roll:2,
+        name:"pandu",
+        mark:31
+      },
+      {
+        roll:3,
+        name:"boby",
+        mark:17
+      },
+      {
+        roll:5,
+        name:"shubham",
+        mark:52
+      }
+    ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="Student Info" searchBar={false} />
+      <Students studentinfo={students} />
+  </>
   );
 }
-
+  
 export default App;
